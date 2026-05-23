@@ -13,9 +13,9 @@ nsf_award: "2229250"
 # (PIOT-Hub at https://mygeohub.org/piot relates to the lab's input-output
 #  modeling work — include here only if it belongs to this project.)
 tools:
-  - name: "Project Tool"
-    description: "Describe the computational tool developed under this project."
-    url: "https://example.edu"
+  - name: "PIOT Hub for Pharmaceutical Industry"
+    description: "PIOT-Hub for Pharmaceutical allows mapping material flows in any manufacturing network supporting various API manufacturing."
+    url: "https://piothub.anvilcloud.rcac.purdue.edu"
     external_login: true
 
 outcomes:
