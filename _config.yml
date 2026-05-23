@@ -13,8 +13,8 @@ contact_email: "Singh294@purdue.edu"
 # Base URL.
 #   Free GitHub URL:  url "https://USERNAME.github.io", baseurl "/REPO-NAME"
 #   Custom domain:    url "https://sincslab.org",        baseurl ""
-url: "https://username.github.io"
-baseurl: "/sincs-lab"
+url: "https://shweta-pur-202.github.io"
+baseurl: "/sincs-lab-web"
 
 # ------------------------------------------------------------
 #  LAB MEMBERS.
