@@ -1,0 +1,81 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-box">
+      <div class="hero-eyebrow">{{ site.institution }}</div>
+      <h1 class="hero-title">Sustainable Industrial&ndash;Natural Coupled Systems (SINCS)</h1>
+      <p class="hero-tagline">{{ site.tagline }}</p>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="band">
+  <div class="wrap">
+    <div class="section-label">About the Lab</div>
+    <h2>What we study</h2>
+    <p>
+      The mission of the SINCS group is to enable sustainable growth of the
+      biobased economy and industries while ensuring local and global
+      ecological sustainability. Led by PI Dr. Shweta Singh, the lab works
+      toward a synergy between industrial and natural systems aligned with the
+      Industrial Ecology and Sustainable Engineering vision.
+    </p>
+    <p>
+      An interdisciplinary group housed in the Departments of Agricultural &amp;
+      Biological Engineering and Environmental &amp; Ecological Engineering at
+      Purdue University, SINCS develops mathematical models for the physical
+      coupling of industries with natural systems &mdash; integrating process
+      systems engineering, macroeconomic modeling, and machine learning to
+      inform the adoption of sustainable technologies.
+    </p>
+  </div>
+</section>
+
+<section id="projects" class="band band-alt">
+  <div class="wrap">
+    <div class="section-label">Research</div>
+    <h2>Projects</h2>
+    <p class="section-intro">Each project opens to its own page with outcomes, tools, and publications.</p>
+    <div class="project-cards">
+      {% assign sorted = site.projects | sort: "order" %}
+      {% for project in sorted %}
+        <a class="project-card" href="{{ project.url | relative_url }}">
+          {% if project.funder %}<div class="card-funder">{{ project.funder }}</div>{% endif %}
+          <h3>{{ project.short_title | default: project.title }}</h3>
+          <p>{{ project.summary }}</p>
+          <span class="card-cta">View project &rarr;</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="people" class="band">
+  <div class="wrap">
+    <div class="section-label">Team</div>
+    <h2>People</h2>
+
+    <h3 class="people-group">Current Members</h3>
+    <div class="people-grid">
+      {% for m in site.members %}{% if m.status == "current" %}
+        <div class="person">
+          <div class="person-avatar">{{ m.name | replace: "Dr. ", "" | slice: 0 }}</div>
+          <div>
+            <div class="person-name">{{ m.name }}</div>
+            <div class="person-role">{{ m.role }}</div>
+          </div>
+        </div>
+      {% endif %}{% endfor %}
+    </div>
+
+    <h3 class="people-group">Alumni</h3>
+    <ul class="alumni-list">
+      {% for m in site.members %}{% if m.status == "past" %}
+        <li><span class="alum-name">{{ m.name }}</span> — {{ m.role }}{% if m.now %}, now at {{ m.now }}{% endif %}</li>
+      {% endif %}{% endfor %}
+    </ul>
+  </div>
+</section>

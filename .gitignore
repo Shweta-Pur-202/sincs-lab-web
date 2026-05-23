@@ -1,0 +1,29 @@
+# ── Secrets & credentials (NEVER commit these) ──
+.env
+.env.*
+*.pem
+*.key
+*_secret*
+*credentials*
+*.token
+
+# ── Jekyll build output & cache ──
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# ── Local preview / scratch files ──
+preview*.html
+preview*.png
+
+# ── OS / editor junk ──
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# ── Dependency dirs (if you ever add tooling) ──
+node_modules/
+vendor/

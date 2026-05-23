@@ -1,0 +1,98 @@
+# ============================================================
+#  SINCS LAB — SITE SETTINGS. Edit these, then commit.
+# ============================================================
+title: "SINCS Lab"
+full_name: "Sustainable Industrial-Natural Coupled Systems Lab"
+tagline: "Enabling synergy between industrial and natural systems for a sustainable, biobased economy."
+description: "The SINCS Lab at Purdue University develops models for the physical coupling of industries with natural systems toward sustainable, circular networks."
+
+institution: "Purdue University"
+pi_name: "Dr. Shweta Singh"
+contact_email: "Singh294@purdue.edu"
+
+# Base URL.
+#   Free GitHub URL:  url "https://USERNAME.github.io", baseurl "/REPO-NAME"
+#   Custom domain:    url "https://sincslab.org",        baseurl ""
+url: "https://username.github.io"
+baseurl: "/sincs-lab"
+
+# ------------------------------------------------------------
+#  LAB MEMBERS.
+#    group:  pi | postdoc | phd
+#    status: current | past
+#  To move someone to alumni, change status to "past" and add
+#  their destination in `now` (e.g. now: "Dow").
+# ------------------------------------------------------------
+members:
+  # Principal Investigator
+  - name: "Dr. Shweta Singh"
+    role: "Principal Investigator"
+    group: pi
+    status: current
+
+  # Postdoctoral Researchers
+  - name: "Dr. Chinmay Aras"
+    role: "Postdoctoral Researcher"
+    group: postdoc
+    status: current
+  - name: "Dr. Prem Jagadeesan"
+    role: "Postdoctoral Researcher"
+    group: postdoc
+    status: past
+    now: "Faculty in India"
+
+  # PhD Students — current
+  - name: "Haripriyan Uthayakumar"
+    role: "PhD Student"
+    group: phd
+    status: current
+  - name: "Rahul Panicker"
+    role: "PhD Student"
+    group: phd
+    status: current
+  - name: "Nicolas Iglesia"
+    role: "PhD Student"
+    group: phd
+    status: current
+
+  # PhD Students — alumni
+  - name: "Abhimanyu R. Shekhar"
+    role: "PhD"
+    group: phd
+    status: past
+    now: "Dow"
+  - name: "William Farlessyost"
+    role: "PhD"
+    group: phd
+    status: past
+  - name: "Miriam Stevens"
+    role: "PhD"
+    group: phd
+    status: past
+    now: "USGS"
+  - name: "Apoorva Bademi"
+    role: "PhD"
+    group: phd
+    status: past
+  - name: "Nehika Mathur"
+    role: "PhD"
+    group: phd
+    status: past
+    now: "NIST"
+  - name: "Gargeya Vunnava"
+    role: "PhD"
+    group: phd
+    status: past
+    now: "Amazon Inc."
+
+# ------------------------------------------------------------
+#  Jekyll collection setup — makes _projects/ into pages.
+# ------------------------------------------------------------
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+markdown: kramdown
+exclude:
+  - README.md

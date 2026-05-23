@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.full_name }}{% endif %}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand-mark">SINCS</span>
+        <span class="brand-sub">Lab</span>
+      </a>
+      <nav class="site-nav">
+        <a href="{{ '/#about' | relative_url }}">About</a>
+        <a href="{{ '/#projects' | relative_url }}">Projects</a>
+        <a href="{{ '/#people' | relative_url }}">People</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <div class="footer-brand">{{ site.full_name }}</div>
+        <p class="footer-inst">{{ site.institution }}</p>
+      </div>
+      <div class="footer-contact">
+        <p>PI: {{ site.pi_name }}</p>
+        <p><a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

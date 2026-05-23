@@ -1,0 +1,65 @@
+---
+layout: default
+---
+<article class="project-page">
+  <div class="wrap">
+    <a class="back-link" href="{{ '/#projects' | relative_url }}">&larr; All projects</a>
+
+    {% if page.funder %}<div class="project-funder">{{ page.funder }}</div>{% endif %}
+    <h1 class="project-title">{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="project-subtitle">{{ page.subtitle }}</p>{% endif %}
+
+    <div class="project-body">
+      {{ content }}
+    </div>
+
+    {% if page.tools %}
+    <section class="project-section">
+      <div class="section-label">Tools</div>
+      <h2>Tools We've Developed</h2>
+      <p class="section-intro">These open in a new tab. Some require signing in to the host system.</p>
+      <div class="tool-grid">
+        {% for tool in page.tools %}
+          <a class="tool-card" href="{{ tool.url }}" target="_blank" rel="noopener">
+            <h3>{{ tool.name }} <span class="arrow">&#8599;</span></h3>
+            <p>{{ tool.description }}</p>
+            {% if tool.external_login %}<span class="login-note">Sign-in required</span>{% endif %}
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if page.outcomes %}
+    <section class="project-section">
+      <div class="section-label">Results</div>
+      <h2>Project Outcomes</h2>
+      <ul class="outcome-list">
+        {% for o in page.outcomes %}<li>{{ o }}</li>{% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
+    {% if page.publications %}
+    <section class="project-section">
+      <div class="section-label">Dissemination</div>
+      <h2>Publications</h2>
+      <ul class="pub-list">
+        {% for p in page.publications %}
+          <li>{{ p.authors }} ({{ p.year }}). <span class="pub-title">{{ p.title }}</span> <span class="pub-venue">{{ p.venue }}</span>{% if p.url %} <a href="{{ p.url }}" target="_blank" rel="noopener">[link]</a>{% endif %}</li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
+    {% if page.nsf_award %}
+    <div class="nsf-box">
+      This material is based upon work supported by the National Science
+      Foundation under Grant No. {{ page.nsf_award }}. Any opinions, findings,
+      and conclusions or recommendations expressed in this material are those
+      of the author(s) and do not necessarily reflect the views of the
+      National Science Foundation.
+    </div>
+    {% endif %}
+  </div>
+</article>
